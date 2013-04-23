@@ -36,6 +36,21 @@ class SavingsAccount(Account):
     """Savings account subclass """
     def __init__(self, account_no, balance, interest):
         """subclass constructor method"""
+        super().__init__(account_no, balance)
+        self.__interest = interest
+
+    def calc_interest(self):
+        """helper/support method to show savings account info"""
+        self.deposit
+
+class CurrentAccount(Account):
+    def __init__(self, account_no, balance, overdraft):
+        """subclass constructor method"""
+        super().__init__(account_no, balance)
+        self.__overdraft = overdraft
+
+    def withdraw(self, amount): #overrides superclass withdrawn
+        """helper/support method """
 #main
 acct1 = Account("C01", 0)
 ##print(acct1.get_account_no())
