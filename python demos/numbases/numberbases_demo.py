@@ -1,17 +1,13 @@
 def dec_to_bin(x):
-    binary = []
-    binary.append(1)
-    while x!=1:
-        y = x%2
+    bin_num = ""
+    while x !=0:
+        remainder = x%2
+        bin_num=str(remainder)+bin_num
         x = x//2
-        if y==1:
-            binary.append(1)
-        else:
-            binary.append(0)
-    return binary
+    return bin_num
 
-print(dec_to_bin(2))
+print(dec_to_bin(10))
 
 def bin_to_dec(x):
-    
+        print("")
         
